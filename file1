@@ -1,0 +1,33 @@
+/ Grandparent class (Base Class)
+class Animal {
+void eat() {
+System.out.println("The animal eats food.");
+}
+}
+
+// Parent class (Subclass of Animal, Superclass of Puppy)
+class Dog extends Animal {
+void bark() {
+System.out.println("The dog barks.");
+}
+}
+
+// Child class (Subclass of Dog)
+class Puppy extends Dog {
+void play() {
+System.out.println("The puppy plays.");
+}
+}
+
+// Main class to demonstrate the inheritance
+public class MultilevelInheritanceDemo {
+public static void main(String[] args) {
+// Create an object of the child class (Puppy)
+Puppy myPuppy = new Puppy();
+
+// Call methods using the Puppy object
+myPuppy.eat(); // Inherited from Animal class
+myPuppy.bark(); // Inherited from Dog class
+myPuppy.play(); // Defined in the Puppy class
+}
+}
